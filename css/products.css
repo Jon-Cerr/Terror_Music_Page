@@ -1,0 +1,265 @@
+.products_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.guitars {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  margin: 100px 0;
+  /* border: 3px solid red; */
+}
+
+.guitars .products__title__guitars {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.guitars .products__title__guitars::after {
+  content: "";
+  background-color: cadetblue;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px);
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.carousel__elemento {
+  margin: 0 20px;
+}
+
+.carousel__elemento p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+  /* border: 3px solid green; */
+  position: relative;
+  height: 100%;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  line-height: 30px;
+  border: 2px solid pink;
+  text-align: center;
+  background: none;
+  color: #fff;
+  opacity: 0.2;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.carousel__anterior {
+  left: -30px;
+  border-radius: 50%;
+  background: #000;
+  transition: all 0.4s;
+  align-self: center;
+}
+
+.carousel__siguiente {
+  right: -30px;
+  background: #000;
+  align-self: center;
+  transition: all 0.4s;
+  border-radius: 50%;
+}
+
+.carousel__list {
+  overflow: hidden;
+}
+
+.carousel__elemento {
+  text-align: center;
+}
+
+.carousel__elemento:hover {
+  cursor: pointer;
+}
+
+.carousel__indicadores .glider-dot {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #808080;
+  opacity: 0.2;
+  border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+  opacity: 0.5;
+}
+
+.carousel__indicadores .glider-dot.active {
+  opacity: 1;
+}
+
+.guitars .carousel__elemento img {
+  width: 100%;
+}
+
+.bass {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  margin: 0 0 100px 0;
+  /* border: 3px solid red; */
+}
+
+.bass .products__title__bass {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.bass .products__title__guitars::after {
+  content: "";
+  background-color: cadetblue;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px);
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.bass .carousel__elemento {
+  margin: 0 20px;
+}
+
+.bass .carousel__elemento p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* --- --- CAROUSEL --- --- */
+.bass .carousel__contenedor {
+  /* border: 3px solid green; */
+  position: relative;
+  height: 100%;
+}
+
+.bass .carousel__anterior__bass,
+.bass .carousel__siguiente__bass {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  line-height: 30px;
+  border: 2px solid pink;
+  text-align: center;
+  background: none;
+  color: #fff;
+  opacity: 0.2;
+}
+
+.bass .carousel__anterior__bass:hover,
+.bass .carousel__siguiente__bass:hover {
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.bass .carousel__anterior__bass {
+  left: -30px;
+  border-radius: 50%;
+  background: #000;
+  transition: all 0.4s;
+  align-self: center;
+}
+
+.bass .carousel__siguiente__bass {
+  right: -30px;
+  background: #000;
+  align-self: center;
+  transition: all 0.4s;
+  border-radius: 50%;
+}
+
+.bass .carousel__bass {
+  overflow: hidden;
+}
+
+.bass .carousel__elemento {
+  text-align: center;
+}
+
+.bass .carousel__elemento:hover {
+  cursor: pointer;
+}
+
+.bass .carousel__indicadores__bass .glider-dot {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #808080;
+  opacity: 0.2;
+  border-radius: 0;
+}
+
+.bass .carousel__indicadores__bass .glider-dot:hover {
+  opacity: 0.5;
+}
+
+.bass .carousel__indicadores__bass .glider-dot.active {
+  opacity: 1;
+}
+
+.bass .carousel__elemento img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .guitars, .bass {
+    width: 80%;
+  }
+
+  .guitars .products__title__guitars,
+  .bass .products__title__bass{
+    font-size: 1.5rem;
+  }
+
+  .guitars .carousel__elemento img, 
+  .bass .carousel__elemento img {
+    width: 80%;
+  }
+
+  .carousel__elemento p {
+    font-size: 1rem;
+  }
+}
