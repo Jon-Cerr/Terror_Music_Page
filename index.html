@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terror Music</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css"
@@ -13,19 +14,28 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/products.css" />
-    <link rel="stylesheet" href="css/sucursales.css" />
-    <link rel="stylesheet" href="css/footer.css" />
   </head>
-  <body>
+  <body class="hidden">
+    <div class="centered" id="onload">
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
     <main id="inicio">
       <nav class="nav_bar">
         <a href="#" class="logo">
           <img
-            height="50"
-            width="45"
+            height="70"
+            width="70"
             src="assets/Terror_Music.png"
             alt="programador"
           />
@@ -40,7 +50,7 @@
           <li><a href="#inicio" class="selected">Inicio</a></li>
           <li><a href="#guitars">Guitarras</a></li>
           <li><a href="#bajos">Bajos</a></li>
-          <li><a href="#extras">Extras</a></li>
+          <li><a href="#extras">Destacados</a></li>
           <li><a href="#sucursales">Sucursales</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -136,7 +146,8 @@
               <div class="carousel__elemento">
                 <img
                   src="https://cdn.shopify.com/s/files/1/0183/0329/products/0149612373_720x.png?v=1572977095"
-                  alt="Rock and roll" title="FENDER VINTERA ´50S PRECISION BASS 0149612373"
+                  alt="Rock and roll"
+                  title="FENDER VINTERA ´50S PRECISION BASS 0149612373"
                 />
                 <p>FENDER VINTERA ´50S PRECISION BASS 0149612373</p>
               </div>
@@ -198,6 +209,43 @@
         </div>
       </div>
     </section>
+    <section class="extras" id="extras">
+      <h3 class="extras__title">Destacados</h3>
+      <div class="extras__fender">
+        <div class="extra__fender__guitars">
+          <div class="extra__title__fender">
+            <h4>Guitarras Fender</h4>
+          </div>
+        </div>
+        <div class="extra__squier__bass">
+          <div class="extra__title__fender">
+            <h4>Bajos Squier</h4>
+          </div>
+        </div>
+      </div>
+      <div class="extras__guitars">
+        <div class="extra__2">
+          <div class="extra__title__guitars">
+            <h4>Guitarras EVH</h4>
+          </div>
+        </div>
+        <div class="extra__2">
+          <div class="extra__title__guitars">
+            <h4>Guitarras Epiphone</h4>
+          </div>
+        </div>
+        <div class="extra__2">
+          <div class="extra__title__guitars">
+            <h4>Guitarras Gibson</h4>
+          </div>
+        </div>
+        <div class="extra__2">
+          <div class="extra__title__guitars">
+            <h4>Guitarras Ibanez</h4>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="sucursales" id="sucursales">
       <div class="sucursal_info">
         <h3 class="sucursal_title">VISITANOS EN NUESTRAS SUCURSALES</h3>
@@ -221,12 +269,17 @@
         <a href="#"><img src="assets/icon-twitter.svg" alt="ig-icon" /></a>
       </div>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/b4a7d9130f.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script
       src="https://kit.fontawesome.com/2c36e9b7b1.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script defer src="js/main.js"></script>
   </body>
 </html>

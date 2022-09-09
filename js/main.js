@@ -1,22 +1,24 @@
 const menu = document.querySelector(".menu");
 const openMenu = document.querySelector(".open_menu");
 const closeMenu = document.querySelector(".close_menu");
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const id = entry.target.getAttribute("id");
-    const menuLink = document.querySelector(`.menu a[href="#${id}"]`);
-    if (entry.isIntersecting) {
-      document.querySelector(".menu a.selected").classList.remove("selected");
-      menuLink.classList.add("selected");
-    }
-  });
-}, { rootMargin: "-50% 0px -50% 0px" });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+      const menuLink = document.querySelector(`.menu a[href="#${id}"]`);
+      if (entry.isIntersecting) {
+        document.querySelector(".menu a.selected").classList.remove("selected");
+        menuLink.classList.add("selected");
+      }
+    });
+  },
+  { rootMargin: "-50% 0px -50% 0px" }
+);
 
 window.addEventListener("load", () => {
   new Glider(document.querySelector(".carousel__lista"), {
     slidesToShow: 1,
     slidesToScroll: 1,
-    loop: true,
     dots: ".carousel__indicadores",
     arrows: {
       prev: ".carousel__anterior",
@@ -45,7 +47,6 @@ window.addEventListener("load", () => {
   new Glider(document.querySelector(".carousel__bass"), {
     slidesToShow: 1,
     slidesToScroll: 1,
-    loop: true,
     dots: ".carousel__indicadores__bass",
     arrows: {
       prev: ".carousel__anterior__bass",
@@ -71,7 +72,58 @@ window.addEventListener("load", () => {
       },
     ],
   });
+
+  $("#onload").fadeOut();
+  $("body").removeClass("hidden");
+  menuScroll();
+  window.sr = ScrollReveal();
+
+  sr.reveal(".guitars", {
+    duration: 3000,
+    origin: "bottom",
+    distance: "-100px",
+  });
+
+  sr.reveal(".bass", {
+    duration: 3000,
+    origin: "right",
+    distance: "-100px",
+  });
+
+  sr.reveal(".sucursales", {
+    duration: 3000,
+    origin: "top",
+    distance: "-100px",
+  });
+
+  sr.reveal(".extra__fender__guitars", {
+    duration: 3000,
+    origin: "right",
+    distance: "-100px",
+  });
+
+  sr.reveal(".extra__squier__bass", {
+    duration: 3000,
+    origin: "right",
+    distance: "-100px",
+  });
+
+  sr.reveal(".extra__2", {
+    duration: 3000,
+    origin: "bottom",
+    distance: "-100px",
+  });
 });
+
+function menuScroll() {
+  scroll = document.documentElement.scrollTop;
+  nav = document.querySelector(".nav_bar");
+  if (scroll > 20) {
+    nav.classList.add("nav_mod");
+  } else if (scroll < 20) {
+    nav.classList.remove("nav_mod");
+  }
+}
 
 function toggleMenu() {
   menu.classList.toggle("menu_opened");
@@ -79,6 +131,10 @@ function toggleMenu() {
 
 openMenu.addEventListener("click", toggleMenu);
 closeMenu.addEventListener("click", toggleMenu);
+
+window.addEventListener("scroll", () => {
+  menuScroll();
+});
 
 new TypeIt("#initial_span_typeit", {
   speed: 50,
