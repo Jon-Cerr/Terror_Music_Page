@@ -78,41 +78,41 @@ window.addEventListener("load", () => {
   menuScroll();
   window.sr = ScrollReveal();
 
-  sr.reveal(".guitars", {
-    duration: 3000,
-    origin: "bottom",
-    distance: "-100px",
-  });
+  // sr.reveal(".guitars", {
+  //   duration: 3000,
+  //   origin: "bottom",
+  //   distance: "-100px",
+  // });
 
-  sr.reveal(".bass", {
-    duration: 3000,
-    origin: "right",
-    distance: "-100px",
-  });
+  // sr.reveal(".bass", {
+  //   duration: 3000,
+  //   origin: "right",
+  //   distance: "-100px",
+  // });
 
-  sr.reveal(".sucursales", {
-    duration: 3000,
-    origin: "top",
-    distance: "-100px",
-  });
+  // sr.reveal(".sucursales", {
+  //   duration: 3000,
+  //   origin: "top",
+  //   distance: "-100px",
+  // });
 
-  sr.reveal(".extra__fender__guitars", {
-    duration: 3000,
-    origin: "right",
-    distance: "-100px",
-  });
+  // sr.reveal(".extra__fender__guitars", {
+  //   duration: 3000,
+  //   origin: "right",
+  //   distance: "-100px",
+  // });
 
-  sr.reveal(".extra__squier__bass", {
-    duration: 3000,
-    origin: "right",
-    distance: "-100px",
-  });
+  // sr.reveal(".extra__squier__bass", {
+  //   duration: 3000,
+  //   origin: "right",
+  //   distance: "-100px",
+  // });
 
-  sr.reveal(".extra__2", {
-    duration: 3000,
-    origin: "bottom",
-    distance: "-100px",
-  });
+  // sr.reveal(".extra__2", {
+  //   duration: 3000,
+  //   origin: "bottom",
+  //   distance: "-100px",
+  // });
 });
 
 function menuScroll() {
