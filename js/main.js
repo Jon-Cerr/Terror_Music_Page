@@ -76,7 +76,7 @@ window.addEventListener("load", () => {
   $("#onload").fadeOut();
   $("body").removeClass("hidden");
   menuScroll();
-  window.sr = ScrollReveal();
+  // window.sr = ScrollReveal();
 
   // sr.reveal(".guitars", {
   //   duration: 3000,
